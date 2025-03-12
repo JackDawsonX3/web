@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>วิทยาลัยอาชีวศึกษานครปฐม</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Kanit', Arial, sans-serif;
+            color: #333;
+            background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80'); /* รูปภาพพื้นหลัง */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .content {
+            background-color: rgba(255, 255, 255, 0.9); /* พื้นหลัง content แบบโปร่งใส */
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            backdrop-filter: blur(10px); /* เพิ่มเอฟเฟกต์เบลอ */
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .logo img {
+            max-width: 100%; /* ปรับขนาดโลโก้ให้พอดีกับ container */
+            height: auto;
+            width: 300px; /* กำหนดความกว้างของโลโก้ */
+        }
+        .announcement {
+            max-width: 100%;
+            height: auto;
+            margin: 0 auto;
+            border-radius: 15px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        .section-divider {
+            margin: 40px 0;
+            border-top: 2px solid #ddd;
+        }
+        .video-section {
+            display: flex;
+            justify-content: space-between; /* จัดวางให้ห่างกัน */
+            gap: 20px;
+            margin-top: 20px;
+            align-items: flex-start;
+        }
+        .video {
+            width: 48%; /* ปรับความกว้างของแต่ละ video */
+            background-color: rgba(255, 255, 255, 0.8); /* พื้นหลัง video แบบโปร่งใส */
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .video:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        .video-category {
+            text-align: left;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #1565c0; /* สีหัวข้อหมวดหมู่ */
+        }
+        .video iframe {
+            width: 100%;
+            height: 300px;
+            border-radius: 10px;
+            border: none;
+        }
+        @media screen and (max-width: 768px) {
+            .video-section {
+                flex-direction: column; /* เปลี่ยนเป็นแนวตั้งเมื่อจอเล็ก */
+            }
+            .video {
+                width: 100%; /* ให้ video เต็มความกว้างเมื่อจอเล็ก */
+            }
+            .video iframe {
+                height: 200px; /* ปรับความสูงของ iframe เมื่อจอเล็ก */
+            }
+            .logo img {
+                width: 200px; /* ปรับขนาดโลโก้ให้เล็กลงเมื่อจอเล็ก */
+            }
+        }
+    </style>
+    <!-- เพิ่มฟอนต์ Kanit จาก Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="content">
+        <div class="header">
+            <div class="logo">
+                <img src="https://nc.ac.th/nvc/wp-content/uploads/2023/07/logo6.png" alt="โลโก้วิทยาลัย">
+            </div>
+        </div>
+        
+        <img src="img/poster DGNVC.png" alt="ประกาศรับสมัคร" class="announcement">
+        
+        <div class="section-divider"></div>
+        
+        <div class="video-section">
+            <div class="video">
+                <div class="video-category">หมวดหมู่ 1</div>
+                <iframe src="https://www.youtube.com/embed/csdRvhhUdnE?si=7VKZOQT05FpPJjTf" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="video">
+                <div class="video-category">หมวดหมู่ 2</div>
+                <iframe src="https://www.youtube.com/embed/3tY0orRkRpA?si=w67rpt-TVprRdJ5t" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

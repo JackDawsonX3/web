@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <title>ศิลปกรรมและเศรษฐกิจสร้างสรรค์</title>
+    <style>
+        body {
+            font-family: 'Chakra Petch', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80'); /* รูปภาพพื้นหลัง */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #121212;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .wrapper {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            background-color: rgba(255, 255, 255, 0.9); /* พื้นหลัง header แบบโปร่งใส */
+            padding: 10px 0;
+            box-shadow: 0 3px 6px -5px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            border-radius: 15px;
+            backdrop-filter: blur(10px); /* เพิ่มเอฟเฟกต์เบลอ */
+        }
+        .header img {
+            max-width: 400px;
+            height: auto;
+        }
+        .content {
+            margin-top: 20px;
+            text-align: center;
+        }
+        h1, h2 {
+            color: #01216b;
+        }
+
+        /* โครงสร้าง Grid */
+        .teacher-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto auto auto auto; /* 4 แถว */
+            gap: 30px; /* ระยะห่าง */
+            justify-items: center;
+            align-items: center;
+        }
+
+        .teacher-photo {
+            width: 200px;
+            height: 250px;
+            border-radius: 10px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+        
+        .teacher-card {
+            background-color: rgba(255, 255, 255, 0.9); /* พื้นหลังการ์ดแบบโปร่งใส */
+            border-radius: 12px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+            text-align: center;
+            padding: 20px;
+            width: 270px; /* ขยายให้สมดุลกับภาพ */
+            height: 380px; /* เพิ่มความสูงให้พอดีกับภาพ */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            backdrop-filter: blur(10px); /* เพิ่มเอฟเฟกต์เบลอ */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(0, 0, 0, 0.1); /* เพิ่มกรอบจาง ๆ */
+        }
+
+        .teacher-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .teacher-name {
+            font-size: 18px;
+            font-weight: bold;
+            color: #01216b;
+        }
+
+        .teacher-position {
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* กำหนดตำแหน่งให้ตรงแถว */
+        .teacher-grid > div:nth-child(1) { grid-column: 2 / 3; } /* หัวหน้าแผนก อยู่แถวแรก ตรงกลาง */
+        .teacher-grid > div:nth-child(2) { grid-column: 1 / 2; } /* คนที่ 1 ของแถวที่สอง */
+        .teacher-grid > div:nth-child(3) { grid-column: 2 / 3; } /* คนที่ 2 ของแถวที่สอง */
+        .teacher-grid > div:nth-child(4) { grid-column: 3 / 4; } /* คนที่ 3 ของแถวที่สอง */
+        .teacher-grid > div:nth-child(5) { grid-column: 1 / 2; } /* คนที่ 1 ของแถวที่สาม */
+        .teacher-grid > div:nth-child(6) { grid-column: 2 / 3; } /* คนที่ 2 ของแถวที่สาม */
+        .teacher-grid > div:nth-child(7) { grid-column: 3 / 4; } /* คนที่ 3 ของแถวที่สาม */
+        .teacher-grid > div:nth-child(8) { grid-column: 2 / 3; } /* คนสุดท้าย อยู่แถวล่างสุด ตรงกลาง */
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <a href="https://nc.ac.th/nvc/">
+                <img src="https://nc.ac.th/nvc/wp-content/uploads/2023/07/logo6.png" alt="วิทยาลัยอาชีวศึกษานครปฐม">
+            </a>
+        </header>
+
+        <div class="content">
+            <h1>ศิลปกรรมและเศรษฐกิจสร้างสรรค์</h1>
+            <h2>แผนกวิชาดิจิทัลกราฟิก</h2>
+
+            <div class="teacher-grid">
+                <!-- หัวหน้าแผนก (แถวที่ 1 - บนสุด) -->
+                <div class="teacher-card">
+                    <img src="img/สุมณฑ์มาส.png" alt="สุมณฑ์มาศ สุขสุชะโน" class="teacher-photo">
+                    <div class="teacher-name">นางสุมณฑ์มาศ สุขสุชะโน</div>
+                    <div class="teacher-position">หัวหน้าแผนกวิชา (ครูชำนาญการ)</div>
+                </div>
+            
+                <!-- แถวที่ 2 -->
+                <div class="teacher-card">
+                    <img src="img/นายเอกชน-โพธินาม2.jpg" alt="เอกชน โพธินาม" class="teacher-photo">
+                    <div class="teacher-name">นายเอกชน โพธินาม</div>
+                    <div class="teacher-position">ครู</div>
+                </div>
+                <div class="teacher-card">
+                    <img src="img/นายณัฐกฤษฏ์-จันทร์รุ่งเรือง-1-scaled.jpg" alt="ณัฐกฤษฎ์ จันทร์รุ่งเรือง" class="teacher-photo">
+                    <div class="teacher-name">นายณัฐกฤษฎ์ จันทร์รุ่งเรือง</div>
+                    <div class="teacher-position">ครู</div>
+                </div>
+
+                <div class="teacher-card">
+                    <img src="img/นายพศิน-สุภิรักษ์1.jpg" alt="พศิน สุภิรักษ์" class="teacher-photo">
+                    <div class="teacher-name">นายพศิน สุภิรักษ์</div>
+                    <div class="teacher-position">ครูผู้ช่วย</div>
+                </div>
+
+                <div class="teacher-card">
+                    <img src="img/กฤษฎาพร.png" alt="กฤษฎาพร แนบนวล" class="teacher-photo">
+                    <div class="teacher-name">นางสาวกฤษฎาพร แนบนวล</div>
+                    <div class="teacher-position">ครู</div>
+                </div>
+            
+                <div class="teacher-card">
+                    <img src="img/IMG_8012-scaled.jpg" alt="พรจนา แก้วนรา" class="teacher-photo">
+                    <div class="teacher-name">นางสาวพัทธนันท์ จงยิ่งยศ</div>
+                    <div class="teacher-position">พนักงานประจำ</div>
+                </div>
+                <div class="teacher-card">
+                    <img src="img/พรจนา.png" alt="นภาพร อ่อนสด" class="teacher-photo">
+                    <div class="teacher-name">นางสาวพรจณา แก้วนรา</div>
+                    <div class="teacher-position">ครูจ้างสอน</div>
+                </div>
+            
+                <!-- แถวที่ 4 (ล่างสุด) -->
+                <div class="teacher-card">
+                    <img src="img/นภาพร.png" alt="นภาพร อ่อนสด" class="teacher-photo">
+                    <div class="teacher-name">นางสาวนภาพร อ่อนสด</div>
+                    <div class="teacher-position">ครูจ้างสอน</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
